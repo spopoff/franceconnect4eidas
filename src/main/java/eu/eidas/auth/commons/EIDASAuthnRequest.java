@@ -598,19 +598,25 @@ public final class EIDASAuthnRequest implements Serializable, Cloneable {
      */
     @Override
     public String toString() {
+        IPersonalAttributeList pl = getPersonalAttributeList();
+        String plString = "rien";
+        if(pl!=null){
+            plString = pl.toString();
+        }
         StringBuilder stringBuilder = new StringBuilder(getClass().getSimpleName()).append(" [")
-                .append("samlId             ").append(samlId).append(",\n")
-                .append("destination        ").append(destination).append(",\n")
-                .append("providerName       ").append(providerName).append(",\n")
-                .append("distinguishedName  ").append(distinguishedName).append(",\n")
-                .append("issuer             ").append(issuer).append(",\n")
-                .append("sPID               ").append(sPID).append(",\n")
-                .append("spApplication      ").append(spApplication).append(",\n")
-                .append("spCountry          ").append(spCountry).append(",\n")
-                .append("citizenCountry     ").append(citizenCountry).append(",\n")
-                .append("serviceURL         ").append(serviceURL).append(",\n")
-                .append("alias              ").append(alias).append(",\n")
-                .append("binding            ").append(binding).append(",\n")
+                .append("samlId                ").append(samlId).append(",\n")
+                .append("destination           ").append(destination).append(",\n")
+                .append("providerName          ").append(providerName).append(",\n")
+                .append("distinguishedName     ").append(distinguishedName).append(",\n")
+                .append("issuer                ").append(issuer).append(",\n")
+                .append("sPID                  ").append(sPID).append(",\n")
+                .append("spApplication         ").append(spApplication).append(",\n")
+                .append("spCountry             ").append(spCountry).append(",\n")
+                .append("citizenCountry        ").append(citizenCountry).append(",\n")
+                .append("serviceURL            ").append(serviceURL).append(",\n")
+                .append("alias                 ").append(alias).append(",\n")
+                .append("binding               ").append(binding).append(",\n")
+                .append("personnalAttributeList").append(plString).append(",\n")
                 .append("]");
         return stringBuilder.toString();
     }

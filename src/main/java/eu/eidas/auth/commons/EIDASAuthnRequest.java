@@ -616,7 +616,7 @@ public final class EIDASAuthnRequest implements Serializable, Cloneable {
                 .append("serviceURL            ").append(serviceURL).append(",\n")
                 .append("alias                 ").append(alias).append(",\n")
                 .append("binding               ").append(binding).append(",\n")
-                .append("personnalAttributeList").append(plString).append(",\n")
+                .append("personalAttributeList ").append(plString).append(",\n")
                 .append("]");
         return stringBuilder.toString();
     }

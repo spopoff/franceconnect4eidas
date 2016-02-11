@@ -159,7 +159,7 @@ public final class EIDASUtil {
                 if (StringUtils.isEmpty(paramValue)
                         || (paramValue.length() > maxParamSize)) {
                     retVal = false;
-                    LOG.info("ERROR : Invalid parameter [" + paramName + "] value " + paramValue);
+                    LOG.info("ERROR : Invalid parameter [" + paramConf + "] value " + paramValue);
                 }
             } else {
                 retVal = false;
